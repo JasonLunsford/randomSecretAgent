@@ -13,7 +13,7 @@
 		 layout="column"
 		 layout-align="center center"
 		 layout-align-gt-md="center end">
-		<md-button class="md-raised" ng-click="fetchAgent()">Click Me</md-button>
+		<md-button class="md-primary md-raised" ng-click="fetchAgent()">Click Me</md-button>
 	</div>
 </div>
 
@@ -24,8 +24,12 @@
 		<md-content>
 			<md-card>
 				<div layout="column"
-					 layout-gt-md="row">
+					 layout-gt-md="row"
+					 class="ra-bottom-margin-adjust">
 					<div flex>
+						<md-progress-circular md-mode="indeterminate"
+											  ng-hide="ourSecretAgent.picture.large"
+											  class="ra-waiting-icon"></md-progress-circular>
 						<img hide-gt-md ng-src="{{ourSecretAgent.picture.large}}" />
 						<img hide show-gt-md ng-src="{{ourSecretAgent.picture.medium}}" />
 					</div>

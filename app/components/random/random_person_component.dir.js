@@ -19,6 +19,7 @@ angular.module('randomPersonChallengeApp.random_person_component', [])
             		BaconIpsumService.getRandomCopy().then(function(copyData) {
             			$scope.randomDossier = copyData[0];
             		}).catch(function(err) {
+            			// bacon api sometimes fails to deliver, so let's take advantage of that...
             			$scope.randomDossier = "Classified!";
             		});
             	});

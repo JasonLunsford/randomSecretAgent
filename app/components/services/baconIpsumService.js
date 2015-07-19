@@ -6,7 +6,7 @@ angular.module('randomPersonChallengeApp.services')
             baconIpsumCopyApiBase = BaconIpsumApiFactory.all('/api/');
 
         /**
-         * Go get some random bacon...i mean copy!
+         * Go get some random bacon flavored copy! Yum...bacon!
          * @param [empty]
          * @returns {Object}
          */

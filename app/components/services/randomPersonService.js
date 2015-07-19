@@ -6,7 +6,7 @@ angular.module('randomPersonChallengeApp.services')
     	    randomPersonApiBase = RandomPersonApiFactory.all('/api');
 
         /**
-         * Go get a random person!
+         * Go get a random secret agent!
          * @param [empty]
          * @returns {Promise}
          */

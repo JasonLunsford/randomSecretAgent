@@ -25,6 +25,15 @@
  			margin-right:10px;
  		}
  	}
+
+ 	.ra-waiting-icon {
+ 		left:40%;
+ 		top:25%;
+ 	}
+
+ 	.ra-bottom-margin-adjust {
+ 		margin-bottom: -3px;
+ 	}
  }
 
  .ra-bio-cards {
@@ -36,6 +45,14 @@
  	.ra-list md-list-item {
  		min-height:25px;
  		padding: 0 16px 0 0;
+
+ 		@media (min-width: 960px) {
+ 			font-size:14px;
+  		}
+
+ 		@media (min-width: 1200px) {
+ 			font-size:16px;
+  		}
  	}
 
  	.ra-dossier {
@@ -47,6 +64,14 @@
  		}
  		p {
  			margin:-3px 0px 0px;
+
+	 		@media (min-width: 960px) {
+	 			font-size:14px;
+	  		}
+
+	 		@media (min-width: 1200px) {
+	 			font-size:16px;
+	  		}
  		}
  		ul {
  			margin:0px;
