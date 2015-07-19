@@ -2,8 +2,51 @@
 
 <button ng-click="fetchAgent()">Click Me</button>
 
-<p>{{ourSecretAgent.name.first}}</p>
+<div>
+	<img ng-src="{{ourSecretAgent.picture.medium}}" />
+</div>
 
-<p>{{dateOfBirth}}</p>
+<div>
+	<fieldset>
+		<legend>Presumed Name</legend>
+		<p>"{{presumedName}}"</p>
+	</fieldset>
+</div>
 
-<p>{{randomDossier}}</p>
+<div>
+	<fieldset>
+		<legend>Handle</legend>
+		<p>{{ourSecretAgent.username}}</p>
+	</fieldset>
+</div>
+
+<div>
+	<fieldset>
+		<legend>DOB</legend>
+		<p>{{dateOfBirth}}</p>
+	</fieldset>
+	<fieldset>
+		<legend>Gender</legend>
+		<p>{{ourSecretAgent.gender}}</p>
+	</fieldset>
+	<fieldset>
+		<legend>Nationality</legend>
+		<p>{{ourSecretAgent.nationality}}</p>
+	</fieldset>
+</div>
+
+<div>
+	<h4>Assignment Details</h4>
+	<ul>
+		<li><span>Zone:</span>{{ourSecretAgent.location.state || ourSecretAgent.location.region}}</li>
+		<li><span>Safe House Code:</span>{{ourSecretAgent.location.city}}</li>
+		<li><span>Email Address:</span>{{ourSecretAgent.email}}</li>
+		<li><span>Phone Number:</span>{{ourSecretAgent.phone}}</li>
+		<li><span>Recall Code:</span>{{ourSecretAgent.salt}}</li>
+	</ul>
+</div>
+
+<div>
+	<h4>Agent Dossier</h4>
+	<p>{{randomDossier}}</p>
+</div>
