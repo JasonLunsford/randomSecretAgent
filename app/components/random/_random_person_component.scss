@@ -1,3 +1,55 @@
 /**
- * Styling of Grab Person button, image, and copy goes here
+ * Styling of Random Agent directive markup here
  */
+
+ .ra-bio-heading {
+ 	button {
+ 		font-size:24px;
+ 		margin-left:0px;
+ 		padding:12px;
+ 	}
+
+ 	.ra-no-top-margin {
+ 		margin-top:0px;
+ 	}
+ }
+
+ .ra-bio-highlights {
+ 	p {
+ 		font-size:24px;
+ 		margin:0px 0px 10px 10px;
+
+ 		span {
+ 			color:#757575;
+ 			display:inline-block;
+ 			margin-right:10px;
+ 		}
+ 	}
+ }
+
+ .ra-bio-cards {
+
+ 	.ra-no-top-padding {
+ 		padding:0px 16px 16px;
+ 	}
+
+ 	.ra-list md-list-item {
+ 		min-height:25px;
+ 		padding: 0 16px 0 0;
+ 	}
+
+ 	.ra-dossier {
+ 		h4 {
+ 			margin:0px 0px 16px;
+ 		}
+ 		img {
+ 			border-radius:50%;
+ 		}
+ 		p {
+ 			margin:-3px 0px 0px;
+ 		}
+ 		ul {
+ 			margin:0px;
+ 		}
+ 	}
+ }
