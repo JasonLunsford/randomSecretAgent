@@ -11,8 +11,12 @@
     <!-- inject:css -->
     <!-- endinject -->
 </head>
-<body>
-<div ui-view></div>
+<body layout="column"
+	  layout-gt-md="row"
+	  layout-align="center start">
+	<div flex="95"
+		 flex-gt-md="65"
+		 ui-view></div>
 <!-- bower:js -->
 <!-- endinject -->
 <!-- inject:js -->

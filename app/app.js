@@ -9,8 +9,8 @@ angular.module('randomPersonChallengeApp', [
 	'ui.router'
 ])
 
-.config(['$stateProvider', '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$mdThemingProvider',
+    function($stateProvider, $urlRouterProvider, $mdThemingProvider) {
 
         $urlRouterProvider.otherwise('/');
 
@@ -20,11 +20,22 @@ angular.module('randomPersonChallengeApp', [
                 templateUrl: 'components/home.tpl.html'
             });
 
+		// Material Design Configuration
+		$mdThemingProvider.theme('default')
+			.primaryPalette('deep-purple', {
+				'default': '700'
+			})
+			.backgroundPalette('grey', {
+				'default': '700'
+			})
+			.accentPalette('light-green', {
+				'default': '300'
+			});
+
     }])
 
 .controller('RandomGlobalCtrl', ['$state', 'moment',
 	function($state) {
 		var that = this;
 		that.title = "Secret Agent Generator!";
-
 	}]);

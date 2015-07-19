@@ -3,6 +3,9 @@ angular.module('randomPersonChallengeApp.random_person_component', [])
 .directive('randomPersonComponent', ['RandomPersonService', 'BaconIpsumService', function(RandomPersonService, BaconIpsumService) {
         return {
             restrict    : 'EA',
+            scope		: {
+            				title:'@title'
+            			  },
             templateUrl : 'components/random/random_person_component.tpl.html',
             controller  : function($scope) {
             	RandomPersonService.getRandomPerson().then(function(data) {

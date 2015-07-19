@@ -1,52 +1,75 @@
-<h3>Secret Agent Profile</h3>
-
-<button ng-click="fetchAgent()">Click Me</button>
-
-<div>
-	<img ng-src="{{ourSecretAgent.picture.medium}}" />
+<div layout="column"
+	 layout-gt-md="row">
+	<h1 class="md-display-3"
+		flex
+		flex-gt-md="80">{{title}}</h1>
+	<div flex
+		 flex-gt-md="20">
+		<button ng-click="fetchAgent()">Click Me</button>
+	</div>
 </div>
 
-<div>
-	<fieldset>
-		<legend>Presumed Name</legend>
-		<p>"{{presumedName}}"</p>
-	</fieldset>
+<div layout="column"
+	 layout-gt-md="row">
+	<div flex
+		 flex-gt-md="30">
+		<img ng-src="{{ourSecretAgent.picture.large}}" />
+	</div>
+	<div flex
+		 flex-gt-md="70">
+		<div flex>
+			<fieldset>
+				<legend>Presumed Name</legend>
+				<p>"{{presumedName}}"</p>
+			</fieldset>
+		</div>
+		<div flex>
+			<fieldset>
+				<legend>Handle</legend>
+				<p>{{ourSecretAgent.username}}</p>
+			</fieldset>
+		</div>
+		<div flex
+			 layout="column"
+	 		 layout-gt-md="row">
+			<fieldset flex flex-gt-md="50">
+				<legend>DOB</legend>
+				<p>{{dateOfBirth}}</p>
+			</fieldset>
+			<div flex
+				 flex-gt-md="50"
+				 layout="row">
+				<fieldset flex="50">
+					<legend>Gender</legend>
+					<p>{{ourSecretAgent.gender}}</p>
+				</fieldset>
+				<fieldset flex="50">
+					<legend>Nationality</legend>
+					<p>{{ourSecretAgent.nationality}}</p>
+				</fieldset>
+			</div>
+		</div>
+	</div>
 </div>
 
-<div>
-	<fieldset>
-		<legend>Handle</legend>
-		<p>{{ourSecretAgent.username}}</p>
-	</fieldset>
-</div>
+<div layout="column"
+	 layout-gt-md="row">
+	<div flex
+		 flex-gt-md="50">
+		<h4>Assignment Details</h4>
+		<ul>
+			<li><span>Zone:</span>{{ourSecretAgent.location.state || ourSecretAgent.location.region}}</li>
+			<li><span>Safe House Code:</span>{{ourSecretAgent.location.city}}</li>
+			<li><span>Email Address:</span>{{ourSecretAgent.email}}</li>
+			<li><span>Phone Number:</span>{{ourSecretAgent.phone}}</li>
+			<li><span>Recall Code:</span>{{ourSecretAgent.salt}}</li>
+		</ul>
+	</div>
 
-<div>
-	<fieldset>
-		<legend>DOB</legend>
-		<p>{{dateOfBirth}}</p>
-	</fieldset>
-	<fieldset>
-		<legend>Gender</legend>
-		<p>{{ourSecretAgent.gender}}</p>
-	</fieldset>
-	<fieldset>
-		<legend>Nationality</legend>
-		<p>{{ourSecretAgent.nationality}}</p>
-	</fieldset>
-</div>
-
-<div>
-	<h4>Assignment Details</h4>
-	<ul>
-		<li><span>Zone:</span>{{ourSecretAgent.location.state || ourSecretAgent.location.region}}</li>
-		<li><span>Safe House Code:</span>{{ourSecretAgent.location.city}}</li>
-		<li><span>Email Address:</span>{{ourSecretAgent.email}}</li>
-		<li><span>Phone Number:</span>{{ourSecretAgent.phone}}</li>
-		<li><span>Recall Code:</span>{{ourSecretAgent.salt}}</li>
-	</ul>
-</div>
-
-<div>
-	<h4>Agent Dossier</h4>
-	<p>{{randomDossier}}</p>
+	<div flex
+		 flex-gt-md="50">
+		<h4>Agent Dossier</h4>
+		<img ng-src="{{ourSecretAgent.picture.thumbnail}}" />
+		<p>{{randomDossier}}</p>
+	</div>
 </div>
