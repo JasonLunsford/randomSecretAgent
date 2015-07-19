@@ -25,9 +25,6 @@ angular.module('randomPersonChallengeApp', [
 			.primaryPalette('deep-purple', {
 				'default': '700'
 			})
-			.backgroundPalette('grey', {
-				'default': '700'
-			})
 			.accentPalette('light-green', {
 				'default': '300'
 			});
