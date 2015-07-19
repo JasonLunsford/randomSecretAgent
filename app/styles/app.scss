@@ -1,2 +1,6 @@
-@import "settings";
-@import "../../bower_components/foundation/scss/foundation";
+/**
+ * Import application style sheets
+ */
+@import 'global_styles';
+@import 'typography';
+@import '../components/random/random_person_component';
