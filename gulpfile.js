@@ -5,6 +5,7 @@ var es = require('event-stream');
 var bowerFiles = require('main-bower-files');
 var print = require('gulp-print');
 var Q = require('q');
+var Server = require('karma').Server;
 
 // == PATH STRINGS ========
 
@@ -163,6 +164,13 @@ gulp.task('build-app-dev', pipes.builtAppDev);
 
 // cleans and builds a complete dev environment
 gulp.task('clean-build-app-dev', ['clean-dev'], pipes.builtAppDev);
+
+// start karma
+gulp.task('start-karma', function (done) {
+  new Server({
+    configFile: __dirname + '/randomperson.conf.js'
+  }, done).start();
+});
 
 // clean, build, and watch live changes to the dev environment
 gulp.task('watch', ['clean-build-app-dev', 'validate-devserver-scripts'], function() {
