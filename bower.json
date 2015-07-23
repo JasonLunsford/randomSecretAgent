@@ -8,12 +8,14 @@
     "angular-ui-router": "0.2.15",
     "angular-aria": "1.4.1",
     "angular-material": "0.10.0",
+    "angular-material-mocks": "./bower_components/angular-material/angular-material-mocks.js",
     "angular-animate": "1.4.1",
     "lodash": "3.10.0",
     "restangular": "1.5.1",
-    "angular-moment": "~0.10.1"
+    "angular-moment": "~0.10.1",
+    "angular-mocks": "1.4.3"
   },
   "resolutions": {
-    "angular": "1.4.1"
+    "angular": ">=1.2.0 <1.5.0"
   }
 }

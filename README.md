@@ -10,6 +10,10 @@ My solution to the [Random User Challenge](https://github.com/kentcdodds/random-
 * type "gulp watch" to start server
 * browse to localhost:8080, and have fun!
 
+## Update
+
+Now featuring Karma / Jasmine support for unit testing demonstrations...once angular-material & angular-mock play nice together again...
+
 ## Credit
 
 This demo was born from the incredible [healthy-gulp-angular](https://github.com/paislee/healthy-gulp-angular) seed. All respect paid to the work of that fantastic project!

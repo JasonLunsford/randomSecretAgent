@@ -4,6 +4,7 @@ angular.module('randomPersonChallengeApp', [
 	'randomPersonChallengeApp.random_person_component',
 
 	'angularMoment',
+/*	'ngMaterial-mock',*/
 	'ngMaterial',
 	'restangular',
 	'ui.router'
