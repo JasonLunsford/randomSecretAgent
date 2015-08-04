@@ -1,9 +1,9 @@
 angular.module('randomPersonChallengeApp.services')
-	.service('RandomPersonService', ['Restangular', 'RandomPersonApiFactory',
-        function(Restangular, RandomPersonApiFactory) {
+	.service('RandomPersonService', ['Restangular', 'RandomPersonRestangularApi',
+        function(Restangular, RandomPersonRestangularApi) {
 
     	var RandomPersonService = this,
-    	    randomPersonApiBase = RandomPersonApiFactory.all('/api');
+    	    randomPersonApiBase = RandomPersonRestangularApi.all('/api');
 
         /**
          * Go get a random secret agent!

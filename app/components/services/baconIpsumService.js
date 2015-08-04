@@ -1,9 +1,9 @@
 angular.module('randomPersonChallengeApp.services')
-	.service('BaconIpsumService', ['Restangular', 'BaconIpsumApiFactory',
-        function(Restangular, BaconIpsumApiFactory) {
+	.service('BaconIpsumService', ['Restangular', 'BaconIpsumRestangularApi',
+        function(Restangular, BaconIpsumRestangularApi) {
 
     	var BaconIpsumService = this,
-            baconIpsumCopyApiBase = BaconIpsumApiFactory.all('/api/');
+            baconIpsumCopyApiBase = BaconIpsumRestangularApi.all('/api/');
 
         /**
          * Go get some random bacon flavored copy! Yum...bacon!
